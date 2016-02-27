@@ -1,4 +1,4 @@
-package GUI;
+package ar.edu.utn.frro.tc.sdc.gui;
 
 import javax.swing.table.DefaultTableModel;
 

@@ -1,4 +1,4 @@
-package logicCloseLoop;
+package ar.edu.utn.frro.tc.sdc.closedloop;
 
 import java.awt.BasicStroke;
 import java.awt.Color;

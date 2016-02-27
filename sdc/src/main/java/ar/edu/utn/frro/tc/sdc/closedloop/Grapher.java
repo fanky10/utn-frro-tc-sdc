@@ -1,7 +1,5 @@
-package logicCloseLoop;
+package ar.edu.utn.frro.tc.sdc.closedloop;
 
-import GUI.DataClosedZN;
-import GUI.PanelClosedZieglerNichols;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -10,6 +8,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
+
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFileChooser;
@@ -19,6 +18,7 @@ import javax.swing.Timer;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.table.TableColumn;
 import javax.swing.table.TableColumnModel;
+
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.axis.ValueAxis;
@@ -27,6 +27,9 @@ import org.jfree.chart.plot.ValueMarker;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.XYItemRenderer;
 import org.jfree.data.xy.XYSeriesCollection;
+
+import ar.edu.utn.frro.tc.sdc.gui.DataClosedZN;
+import ar.edu.utn.frro.tc.sdc.gui.PanelClosedZieglerNichols;
 
 public class Grapher
 {

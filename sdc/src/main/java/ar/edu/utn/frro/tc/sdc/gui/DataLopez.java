@@ -1,8 +1,8 @@
-package GUI;
+package ar.edu.utn.frro.tc.sdc.gui;
 
 import javax.swing.table.DefaultTableModel;
 
-public abstract class DataKS {
+public abstract class DataLopez {
 	public static DefaultTableModel getConstants() {
 		return new DefaultTableModel(new Object[][] {
 				{ "IAE", Double.valueOf(constantesM[0][0]),
@@ -43,21 +43,21 @@ public abstract class DataKS {
 	}
 
 	public static DefaultTableModel getModelValuesControllers(double vL,
-			double vT, double kp, double tau) {
+			double vT, double Kp, double tau) {
 		double[][] result = new double[3][6];
-		result[0][0] = redondear(constantesM[0][0] / kp
+		result[0][0] = redondear(constantesM[0][0] / Kp
 				* Math.pow(vL / tau, constantesM[0][1]));
 		result[0][1] = redondear(tau / constantesM[0][2]
 				* Math.pow(vL / tau, -constantesM[0][3]));
 		result[0][2] = redondear(tau * constantesM[0][4]
 				* Math.pow(vL / tau, constantesM[0][5]));
-		result[1][0] = redondear(constantesM[1][0] / kp
+		result[1][0] = redondear(constantesM[1][0] / Kp
 				* Math.pow(vL / tau, constantesM[1][1]));
 		result[1][1] = redondear(tau / constantesM[1][2]
 				* Math.pow(vL / tau, -constantesM[1][3]));
 		result[1][2] = redondear(tau * constantesM[1][4]
 				* Math.pow(vL / tau, constantesM[1][5]));
-		result[2][0] = redondear(constantesM[2][0] / kp
+		result[2][0] = redondear(constantesM[2][0] / Kp
 				* Math.pow(vL / tau, constantesM[2][1]));
 		result[2][1] = redondear(tau / constantesM[2][2]
 				* Math.pow(vL / tau, -constantesM[2][3]));
@@ -73,8 +73,9 @@ public abstract class DataKS {
 						Double.valueOf(result[1][2]) },
 				{ "PID-ISE", Double.valueOf(result[2][0]),
 						Double.valueOf(result[2][1]),
-						Double.valueOf(result[2][2]) } }, new String[] {
-				"Tipo controlador", "Kc", "Ti", "Td" }) {
+						Double.valueOf(result[2][2]) } },
+
+		new String[] { "Tipo controlador", "Kc", "Ti", "Td" }) {
 			private static final long serialVersionUID = 1L;
 
 			Class[] columnTypes = { String.class, String.class, String.class,
@@ -104,14 +105,14 @@ public abstract class DataKS {
 		return description;
 	}
 
-	private static String headTitle = "Método de Kaya y Sheib - Sistema de lazo abierto";
+	private static String headTitle = "Método de Lopez - Sistema de lazo abierto";
 
-	private static double[][] constantesM = {
-			{ 0.98089D, -0.76167D, 0.91032D, -1.05211D, 0.59974D, 0.89819D },
-			{ 0.77902D, -1.06401D, 1.14311D, -0.70949D, 0.57137D, 1.03826D },
-			{ 1.11907D, -0.89711D, 0.7987D, -0.9548D, 0.54766D, 0.87798D } };
+	static double[][] constantesM = {
+			{ 1.435D, -0.921D, 0.878D, -0.749D, 0.482D, 1.137D },
+			{ 1.357D, -0.947D, 0.842D, -0.738D, 0.381D, 0.995D },
+			{ 1.495D, -0.945D, 1.101D, -0.771D, 0.56D, 1.006D } };
 
-	private static String description = "Mientras López desarrolló el método de sintonización para un controlador PID-Ideal, Kaya y Sheib realizaron lo mismo para controladores que se denominaron PID-Clásico (PID-Serie), PID- No Interactuante (una variación del PID-Paralelo) y PID-Industrial.\n\nEl procedimiento de sintonización está basado en el mejor modelo de primer orden más tiempo muerto que se pueda obtener para lazos de control que funcionan como reguladores. El criterio de desempeño corresponde a la minimización de alguno de los criterios integrales y el controlador a uno de los indicados anteriormente. \n\n";
+	private static String description = "El primer método basado en criterios integrales que presentó ecuaciones para el cálculo de los parámetros del controlador fue desarrollado por López y es conocido como el método de López.\n\nLópez define una función de costo de la forma: Φ = F[ e(t),t]dt ; donde F es una función del error y del tiempo. Se obtiene un valor que caracteriza la respuesta del sistema.\n\nEntre menor sea el valor de Φ, mejor será el desempeño del sistema de control, por ello, un desempeño óptimo se obtiene cuando Φ es mínimo.\n\nLos criterios de desempeño utilizados por López fueron: integral del error absoluto (IAE),  integral del error absoluto por el tiempo (ITAE) e integral del error cuadrático (ISE).\n\nLa optimización de los criterios de desempeño integrales de López está basada en el mejor modelo de primer orden más tiempo muerto que se pueda obtener, para lazos de control que funcionan como reguladores con un controlador PID-Ideal.\n\nSegún el criterio de López los parámetros del PID se encuentran en base a la minimización de los índices de funcionamiento. Para esto se asume que la respuesta se aproxima por una función de transferencia de primer orden con retardo.\n\nLa sintonia de controladores PID para procesos industriales está basada normalmente en especificaciones nominales sobre determinadas características de la respuesta del sistema en lazo cerrado a cambios bruscos en el punto de consigna o en la carga.\n\nTambién es usual basar el diseño en criterios de optimización sobre la señal de error, tratando de minimizar alguna de las cuatro integrales típicas de la señal de error: la integral del error (IE), la integral del cuadrado del error (ISE), la integral del valor absoluto del error (IAE) y la integral del valor absoluto del error ponderado en el tiempo (ITAE).\n\n";
 
 	private static double redondear(double numero) {
 		return Math.rint(numero * 100.0D) / 100.0D;

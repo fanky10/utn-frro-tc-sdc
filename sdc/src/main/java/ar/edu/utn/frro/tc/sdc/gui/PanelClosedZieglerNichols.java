@@ -1,10 +1,11 @@
-package GUI;
+package ar.edu.utn.frro.tc.sdc.gui;
 
 import java.awt.BorderLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -16,7 +17,9 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 import javax.swing.table.TableColumn;
 import javax.swing.table.TableColumnModel;
-import logicCloseLoop.Grapher;
+
+import ar.edu.utn.frro.tc.sdc.App;
+import ar.edu.utn.frro.tc.sdc.closedloop.Grapher;
 
 
 
@@ -42,7 +45,7 @@ public class PanelClosedZieglerNichols
   private JTable valoresZieglerNichols;
   private JTable valoresKP;
   
-  public PanelClosedZieglerNichols(final MainView mainView)
+  public PanelClosedZieglerNichols(final App mainView)
   {
     int marginTop = 30;
     int marginRight = 5;
@@ -137,7 +140,7 @@ public class PanelClosedZieglerNichols
 
     JLabel rojo = new JLabel("New label");
     rojo.setBounds(120, 26, 24, 7);
-    rojo.setIcon(new ImageIcon(MainView.class.getResource("/icons/azul.png")));
+    rojo.setIcon(new ImageIcon(App.class.getResource("/icons/azul.png")));
     
     JLabel lblRespuesta = new JLabel("Respuesta");
     lblRespuesta.setBounds(152, 18, 70, 23);
@@ -154,12 +157,12 @@ public class PanelClosedZieglerNichols
     panel.add(lblPerodoCrtico);
     
     JLabel label = new JLabel("");
-    label.setIcon(new ImageIcon(MainView.class.getResource("/icons/rojo.png")));
+    label.setIcon(new ImageIcon(App.class.getResource("/icons/rojo.png")));
     label.setBounds(10, 26, 24, 7);
     panel.add(label);
     
     JLabel label_1 = new JLabel("");
-    label_1.setIcon(new ImageIcon(MainView.class.getResource("/icons/verde.png")));
+    label_1.setIcon(new ImageIcon(App.class.getResource("/icons/verde.png")));
     label_1.setBounds(238, 26, 24, 7);
     panel.add(label_1);
     
@@ -229,9 +232,9 @@ public class PanelClosedZieglerNichols
           PanelClosedZieglerNichols.this.valoresKP.getColumnModel().getColumn(1).setPreferredWidth(51);
           break;
         case 1: 
-          ftLabel.setIcon(new ImageIcon(MainView.class.getResource("/icons/ft1.png"))); break;
-        case 2:  ftLabel.setIcon(new ImageIcon(MainView.class.getResource("/icons/ft2.png"))); break;
-        case 3:  ftLabel.setIcon(new ImageIcon(MainView.class.getResource("/icons/ft3.png")));
+          ftLabel.setIcon(new ImageIcon(App.class.getResource("/icons/ft1.png"))); break;
+        case 2:  ftLabel.setIcon(new ImageIcon(App.class.getResource("/icons/ft2.png"))); break;
+        case 3:  ftLabel.setIcon(new ImageIcon(App.class.getResource("/icons/ft3.png")));
         
 
 

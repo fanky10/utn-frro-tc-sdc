@@ -1,4 +1,4 @@
-package logicCloseLoop;
+package ar.edu.utn.frro.tc.sdc.closedloop;
 
 import org.jfree.data.xy.XYSeries;
 
