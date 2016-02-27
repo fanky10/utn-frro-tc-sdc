@@ -1,4 +1,4 @@
-package GUI;
+package ar.edu.utn.frro.tc.sdc.gui;
 
 import java.awt.Container;
 import java.awt.Font;
@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.io.PrintStream;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -20,8 +21,10 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 import javax.swing.table.TableModel;
-import logicOpenLoop.CurveGenerator;
-import logicOpenLoop.Grapher;
+
+import ar.edu.utn.frro.tc.sdc.App;
+import ar.edu.utn.frro.tc.sdc.openedloop.CurveGenerator;
+import ar.edu.utn.frro.tc.sdc.openedloop.Grapher;
 
 
 
@@ -55,7 +58,7 @@ public class PanelCompare
   private JTextField inputA;
   private JTextField inputB;
   
-  public PanelCompare(MainView mainView)
+  public PanelCompare(App mainView)
   {
     this.mainView1 = mainView;
     

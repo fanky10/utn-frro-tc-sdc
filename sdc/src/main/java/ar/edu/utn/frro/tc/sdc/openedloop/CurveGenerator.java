@@ -1,4 +1,4 @@
-package logicOpenLoop;
+package ar.edu.utn.frro.tc.sdc.openedloop;
 
 import java.awt.BasicStroke;
 import java.awt.Color;

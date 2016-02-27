@@ -1,4 +1,4 @@
-package GUI;
+package ar.edu.utn.frro.tc.sdc.gui;
 
 import java.awt.BorderLayout;
 import java.awt.Color;

@@ -1,4 +1,4 @@
-package GUI;
+package ar.edu.utn.frro.tc.sdc.gui;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JDialog;
@@ -25,14 +26,14 @@ import javax.swing.table.TableCellEditor;
 import javax.swing.table.TableColumn;
 import javax.swing.table.TableColumnModel;
 import javax.swing.table.TableModel;
-import logicOpenLoop.CurveGenerator;
-import logicOpenLoop.Grapher;
+
+import ar.edu.utn.frro.tc.sdc.App;
 
 public class MethodPanelView extends JPanel {
 	private static final long serialVersionUID = 1L;
 	private String method;
 	private JPanel mainPanel;
-	private Grapher graficador;
+	private ar.edu.utn.frro.tc.sdc.openedloop.Grapher graficador;
 	private InformationExpert dataTables;
 	private JTable inputTable;
 	private JTable vTableControllers;
@@ -40,7 +41,7 @@ public class MethodPanelView extends JPanel {
 	int band = 0;
 	private MethodPanelView globalMethodView = this;
 
-	public MethodPanelView(final MainView mainView, String paramM) {
+	public MethodPanelView(final App mainView, String paramM) {
 		this.method = paramM;
 
 		this.dataTables = new InformationExpert();
@@ -49,7 +50,7 @@ public class MethodPanelView extends JPanel {
 		int marginRight = 5;
 		int marginRight2 = 645;
 
-		this.graficador = new Grapher(this.globalMethodView);
+		this.graficador = new ar.edu.utn.frro.tc.sdc.openedloop.Grapher(this.globalMethodView);
 
 		String headTitle = this.dataTables.getTitle(this.method);
 		final String description = this.dataTables.getDescription(this.method);
@@ -212,19 +213,19 @@ public class MethodPanelView extends JPanel {
 		JLabel lblCteDeTiempo = new JLabel("Cte. de tiempo (T)");
 
 		JLabel blanco = new JLabel("Ganancia");
-		blanco.setIcon(new ImageIcon(MainView.class
+		blanco.setIcon(new ImageIcon(App.class
 				.getResource("/icons/blanco.png")));
 		JLabel rojo = new JLabel("Red");
-		rojo.setIcon(new ImageIcon(MainView.class
+		rojo.setIcon(new ImageIcon(App.class
 				.getResource("/icons/rojo.png")));
 		JLabel azul = new JLabel("Blue");
-		azul.setIcon(new ImageIcon(MainView.class
+		azul.setIcon(new ImageIcon(App.class
 				.getResource("/icons/azul.png")));
 		JLabel amarillo = new JLabel("Yelow");
-		amarillo.setIcon(new ImageIcon(MainView.class
+		amarillo.setIcon(new ImageIcon(App.class
 				.getResource("/icons/amarillo.png")));
 		JLabel green = new JLabel("Green");
-		green.setIcon(new ImageIcon(MainView.class
+		green.setIcon(new ImageIcon(App.class
 				.getResource("/icons/verde.png")));
 
 		int widthColor = 15;
@@ -380,7 +381,7 @@ public class MethodPanelView extends JPanel {
 
 								MethodPanelView.this.limpiar(graphicPanel);
 
-								MethodPanelView.this.graficador = new Grapher(
+								MethodPanelView.this.graficador = new ar.edu.utn.frro.tc.sdc.openedloop.Grapher(
 										MethodPanelView.this.globalMethodView);
 								MethodPanelView.this.graficador.insertCurve(kp,
 										tau);
@@ -463,9 +464,9 @@ public class MethodPanelView extends JPanel {
 		});
 	}
 
-	public void completeTables(Grapher graficador, double kp, double tau) {
+	public void completeTables(ar.edu.utn.frro.tc.sdc.openedloop.Grapher graficador, double kp, double tau) {
 		if (graficador.getCurvaActual() != null) {
-			CurveGenerator curvaActual = graficador.getCurvaActual();
+			ar.edu.utn.frro.tc.sdc.openedloop.CurveGenerator curvaActual = graficador.getCurvaActual();
 
 			double vT = curvaActual.getT();
 			double vL = curvaActual.getL();
@@ -474,9 +475,9 @@ public class MethodPanelView extends JPanel {
 		}
 	}
 
-	public void completeTableController(Grapher graph, double kp, double tau) {
+	public void completeTableController(ar.edu.utn.frro.tc.sdc.openedloop.Grapher graph, double kp, double tau) {
 		if (this.graficador.getCurvaActual() != null) {
-			CurveGenerator curvaActual = this.graficador.getCurvaActual();
+			ar.edu.utn.frro.tc.sdc.openedloop.CurveGenerator curvaActual = this.graficador.getCurvaActual();
 
 			double vT = curvaActual.getT();
 			double vL = curvaActual.getL();
