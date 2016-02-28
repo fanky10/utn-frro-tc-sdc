@@ -232,10 +232,6 @@ public class App extends JFrame {
 
 		});
 		menuBar.add(curvaR);
-		menuBar.add(cohenCoon);
-		menuBar.add(lopez);
-		menuBar.add(kayaSheib);
-		menuBar.add(compare);
 
 		JMenu separator = new JMenu("||");
 		JMenu separator2 = new JMenu("||");
