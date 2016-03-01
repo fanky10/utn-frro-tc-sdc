@@ -5,7 +5,7 @@ import javax.swing.table.DefaultTableModel;
 public abstract class DataClosedZN {
 	public static DefaultTableModel getKPModel() {
 		return new DefaultTableModel(new Object[][] { new Object[2] },
-				new String[] { "K último", "P último" }) {
+				new String[] { "K Last", "P Last" }) {
 			private static final long serialVersionUID = 1L;
 
 			Class[] columnTypes = { Double.class, Double.class };
@@ -25,7 +25,7 @@ public abstract class DataClosedZN {
 	public static DefaultTableModel getKPModel(double vK, double vP) {
 		return new DefaultTableModel(new Object[][] { {
 				Double.valueOf(round(vK)), Double.valueOf(round(vP)) } },
-				new String[] { "K último", "P último" }) {
+				new String[] { "K Last", "P Last" }) {
 			private static final long serialVersionUID = 1L;
 
 			Class[] columnTypes = { Double.class, Double.class };
@@ -46,7 +46,7 @@ public abstract class DataClosedZN {
 		return new DefaultTableModel(new Object[][] { { "P", "0.5 Ku" },
 				{ "PI", "0.45 Ku", "(1/1.2) Pu" },
 				{ "PID", "0.6 Ku", "0.5 Pu", "0.125 Pu" } }, new String[] {
-				"Tipo de controlador", "Kc", "Ti", "Td" }) {
+				"Controller Type", "Kc", "Ti", "Td" }) {
 			private static final long serialVersionUID = 1L;
 
 			Class[] columnTypes = { String.class, String.class, String.class,
@@ -74,7 +74,7 @@ public abstract class DataClosedZN {
 						Double.valueOf(round(0.5D * criticP)),
 						Double.valueOf(round(0.125D * criticP)) } },
 
-		new String[] { "Tipo de controlador", "Kc", "Ti", "Td" }) {
+		new String[] { "Controller Type", "Kc", "Ti", "Td" }) {
 			private static final long serialVersionUID = 1L;
 
 			Class[] columnTypes = { String.class, String.class, String.class,
@@ -96,7 +96,7 @@ public abstract class DataClosedZN {
 		return Math.rint(numero * 100.0D) / 100.0D;
 	}
 
-	private static String description = "Un procedimiento de sintonización a lazo cerrado implica deshabilitar cualquier acción integral o derivativa del controlador.\n\nConsiste en ir aumentando la ganancia del controlador hasta que la variable de proceso empiece a oscilar. La cantidad de ganancia necesaria para generar oscilaciones sostenidas (amplitud constante) es llamada “ganancia ultima” del proceso, mientras que el tiempo (período) entre cada pico de oscilación es llamado “período último” del proceso.\n\nZiegler y Nichols indican cómo se debe configurar la ganancia del controlador con un valor de la mitad de la ganancia última.  Kp = 0.5 Ku \n\nKp: Ganancia del controlador \n\nKu: Ganancia última, determinada incrementando la ganancia del controlador hasta lograr oscilación auto-sostenibles.\n\nUna ganancia del controlador a la mitad de la “ganancia última” determinada experimentalmente resulta una razonable respuesta rápida ante cambios de setpoint y cambios de carga.\n\nLas oscilaciones de la variable de proceso a cambios de setpoint y de carga son atenuadas con cada pico de onda siendo aproximadamente un cuarto de la amplitud del pico anterior.\n\nLas reglas dadas por Ziegler y Nichols describen una relación real entre los parámetros de sintonización y las características operacionales del proceso. Para que el proceso oscile constantemente la ganancia del controlador debería ser una fracción de la ganancia última y la constante de tiempo integral debería ser proporcional a la constante de tiempo del proceso. \n\n";
+	private static String description = "A tuning procedure involves closed-loop or disable any integral derivative action controller.\n\nConsists to gradually increase the controller gain until the process variable starts to oscillate.The amount of gain required to generate sustained oscillations (constant amplitude) is called ‘last gain’ process, while time (period) between each peak oscillation is called ''last period'' process.\n\nZiegler and Nichols indicate how to configure the controller gain with a value of half the ultimate gain. Kp = 0.5 Ku \n\nKp: Gain Controller\n\nKu:Last gain, determined by increasing the controller gain to achieve self-sustaining oscillation \n\nA controller gain half of the ''ultimate gain'' determined experimentally is a reasonable fast response to changes in set point and load changes.\n\n The oscillations of the process variable setpoint changes and load are attenuated with each wave peak being approximately a quarter of the width of previous peak.\n\nThe rules given by Ziegler and Nichols describes a real relationship between the tuning parameters and operational characteristics of the process. For the process to constantly swing the controller gain should be a fraction of the ultimate gain and integral time constant should be proportional to the time constant of the process.\n\n";
 
 	public static String getDescription() {
 		return description;

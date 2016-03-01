@@ -99,7 +99,7 @@ public class InformationExpert {
 
 	public DefaultTableModel getModelValuesControllers() {
 		return new DefaultTableModel(new Object[][] { { "P" }, { "PI" }, { "PID" } },
-				new String[] { "Tipo controlador", "Kc", "Ti", "Td" }) {
+				new String[] { "Controller Type", "Kc", "Ti", "Td" }) {
 			private static final long serialVersionUID = 1L;
 
 			Class[] columnTypes = { String.class, String.class, String.class,

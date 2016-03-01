@@ -51,7 +51,7 @@ public class PanelClosedZieglerNichols
     int marginRight = 5;
     int marginRight2 = 635;
     
-    String headTitle = "Método de Ziegler y Nichols de oscilaciones sostenidas";
+    String headTitle = "Ziegler and Nichols - Oscillation Method";
     
     this.graficador = new Grapher(this);
     
@@ -64,7 +64,7 @@ public class PanelClosedZieglerNichols
 
 
     JPanel panel = new JPanel();
-    panel.setBorder(new TitledBorder(null, "Referencias", 4, 2, null, null));
+    panel.setBorder(new TitledBorder(null, "References", 4, 2, null, null));
     panel.setBounds(marginRight2, 386, 390, 47);
     this.mainPanel.add(panel);
     
@@ -75,20 +75,20 @@ public class PanelClosedZieglerNichols
     this.mainPanel.add(grafico);
     
     JPanel ftPanel = new JPanel();
-    ftPanel.setBorder(new TitledBorder(null, "Función de transferencia", 4, 2, null, null));
+    ftPanel.setBorder(new TitledBorder(null, "Transfer Function", 4, 2, null, null));
     ftPanel.setBounds(marginRight2, 70, 250, 90);
     this.mainPanel.add(ftPanel);
     ftPanel.setLayout(null);
     
     JPanel ziegerynichols = new JPanel();
-    ziegerynichols.setBorder(new TitledBorder(null, "Valores propuestos por Ziegler y Nichols", 4, 2, null, null));
+    ziegerynichols.setBorder(new TitledBorder(null, "Proposed by Ziegler and Nichols Values", 4, 2, null, null));
     ziegerynichols.setBounds(marginRight2, 206, 390, 178);
     this.mainPanel.add(ziegerynichols);
     ziegerynichols.setLayout(null);
     
 
     JPanel aditionalInfo = new JPanel();
-    aditionalInfo.setBorder(new TitledBorder(null, "Información Adicional", 4, 2, null, null));
+    aditionalInfo.setBorder(new TitledBorder(null, "Additional Information", 4, 2, null, null));
     aditionalInfo.setBounds(marginRight2, 430, 390, 130);
     aditionalInfo.setAlignmentX(0.0F);
     this.mainPanel.add(aditionalInfo);
@@ -142,17 +142,17 @@ public class PanelClosedZieglerNichols
     rojo.setBounds(120, 26, 24, 7);
     rojo.setIcon(new ImageIcon(App.class.getResource("/icons/azul.png")));
     
-    JLabel lblRespuesta = new JLabel("Respuesta");
+    JLabel lblRespuesta = new JLabel("Response");
     lblRespuesta.setBounds(152, 18, 70, 23);
     panel.setLayout(null);
     panel.add(rojo);
     panel.add(lblRespuesta);
     
-    JLabel lblEntrada = new JLabel("Entrada");
+    JLabel lblEntrada = new JLabel("Input");
     lblEntrada.setBounds(44, 22, 60, 14);
     panel.add(lblEntrada);
     
-    JLabel lblPerodoCrtico = new JLabel("Período crítico");
+    JLabel lblPerodoCrtico = new JLabel("Critical Period");
     lblPerodoCrtico.setBounds(272, 22, 90, 14);
     panel.add(lblPerodoCrtico);
     
@@ -170,37 +170,37 @@ public class PanelClosedZieglerNichols
 
 
 
-    String[] valoresComboBox = { "Seleccionar FT", "Función transf. 1", "Función transf. 2", "Función transf. 3" };
+    String[] valoresComboBox = { "Select TF", "Transfer funct. 1", "Transfer funct. 2", "Transfer funct. 3" };
     
     final JComboBox<String> funcionesTransferencias = new JComboBox(valoresComboBox);
     funcionesTransferencias.setBounds(marginRight2, marginTop, 170, 30);
     this.mainPanel.add(funcionesTransferencias);
     
-    final JButton btnDibujar = new JButton("  Graficar", new ImageIcon(MethodPanelView.class.getResource("/icons/icon_graficar.png")));
+    final JButton btnDibujar = new JButton("  Graphing", new ImageIcon(MethodPanelView.class.getResource("/icons/icon_graficar.png")));
     btnDibujar.setHorizontalAlignment(2);
     btnDibujar.setBounds(marginRight2 + 250, marginTop, 140, 40);
     this.mainPanel.setLayout(null);
     this.mainPanel.add(btnDibujar);
     
-    JButton btnSave = new JButton("  Guardar", new ImageIcon(MethodPanelView.class.getResource("/icons/icon_guardar.png")));
+    JButton btnSave = new JButton("  Save", new ImageIcon(MethodPanelView.class.getResource("/icons/icon_guardar.png")));
     btnSave.setHorizontalAlignment(2);
     btnSave.setBounds(marginRight2 + 250, marginTop + 45, 140, 40);
     this.mainPanel.setLayout(null);
     this.mainPanel.add(btnSave);
     
-    final JButton btnStop = new JButton("  Parar", new ImageIcon(MethodPanelView.class.getResource("/icons/icon_cancelar.png")));
+    final JButton btnStop = new JButton("  Stop", new ImageIcon(MethodPanelView.class.getResource("/icons/icon_cancelar.png")));
     btnStop.setHorizontalAlignment(2);
     btnStop.setBounds(marginRight2 + 250, marginTop + 89, 140, 40);
     this.mainPanel.setLayout(null);
     this.mainPanel.add(btnStop);
     
 
-    JButton btnDescripcinDelMtodo = new JButton("Descripción método", new ImageIcon(MethodPanelView.class.getResource("/icons/icon_formula.png")));
+    JButton btnDescripcinDelMtodo = new JButton("Method Description", new ImageIcon(MethodPanelView.class.getResource("/icons/icon_formula.png")));
     btnDescripcinDelMtodo.setHorizontalAlignment(2);
     btnDescripcinDelMtodo.setBounds(647, 452, 240, 40);
     aditionalInfo.add(btnDescripcinDelMtodo);
     
-    JButton controllerSchema = new JButton("Esquema del Controlador", new ImageIcon(MethodPanelView.class.getResource("/icons/icon_formula.png")));
+    JButton controllerSchema = new JButton("Controller Scheme", new ImageIcon(MethodPanelView.class.getResource("/icons/icon_formula.png")));
     controllerSchema.setHorizontalAlignment(2);
     controllerSchema.setBounds(647, 452, 240, 40);
     aditionalInfo.add(controllerSchema);
@@ -287,12 +287,12 @@ public class PanelClosedZieglerNichols
       public void actionPerformed(ActionEvent arg0) {
         if (PanelClosedZieglerNichols.this.band == 1) {
           btnStop.setIcon(new ImageIcon(MethodPanelView.class.getResource("/icons/icon_aceptar.png")));
-          btnStop.setText(" Continuar");
+          btnStop.setText(" Continue");
           PanelClosedZieglerNichols.this.graficador.stop();
           PanelClosedZieglerNichols.this.band = 2;
         } else if (PanelClosedZieglerNichols.this.band == 2) {
           btnStop.setIcon(new ImageIcon(MethodPanelView.class.getResource("/icons/icon_cancelar.png")));
-          btnStop.setText(" Parar");
+          btnStop.setText(" Stop");
           PanelClosedZieglerNichols.this.graficador.start();
           PanelClosedZieglerNichols.this.band = 1;
         }
@@ -303,7 +303,7 @@ public class PanelClosedZieglerNichols
     controllerSchema.addActionListener(new ActionListener()
     {
       public void actionPerformed(ActionEvent e) {
-        String title = "Esquema del Controlador";
+        String title = "Controller Scheme";
         
         ModalEquationView dialog = new ModalEquationView(mainView, title, "/icons/controllerSchemaClosedLoop.png");
         

@@ -33,7 +33,7 @@ public class ModalMethodDescription
   {
     super(frame, true);
     
-    setTitle("Descripción del método");
+    setTitle("Description Method");
     setIconImage(Toolkit.getDefaultToolkit().getImage(ModalMethodDescription.class.getResource("/icons/imagen de respuessta transitoria.jpg")));
     setResizable(false);
     setBounds(100, 100, 600, 500);
@@ -62,7 +62,7 @@ public class ModalMethodDescription
     textPane.setCaretPosition(0);
     
 
-    JButton btnAceptar = new JButton("Aceptar");
+    JButton btnAceptar = new JButton("Accept");
     btnAceptar.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
         ModalMethodDescription.this.dispose();

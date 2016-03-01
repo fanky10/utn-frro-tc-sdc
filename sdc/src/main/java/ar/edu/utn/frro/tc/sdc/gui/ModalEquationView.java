@@ -59,7 +59,7 @@ public class ModalEquationView
   {
     this.sourceText = sourceText;
     
-    this.source = new JLabel("Fuente: " + this.sourceText);
+    this.source = new JLabel("Source: " + this.sourceText);
     this.source.setBounds(10, (int)this.minH + 10, (int)this.minW, 15);
     
     this.source.setForeground(Color.BLUE);

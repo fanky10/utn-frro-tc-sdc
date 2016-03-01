@@ -29,7 +29,7 @@ public abstract class DataZN {
 						Double.valueOf(constantesM[2][4]),
 						Double.valueOf(constantesM[2][5]) } },
 
-		new String[] { "Criterios", "a", "b", "c", "d", "e", "f" });
+		new String[] { "Criterion", "a", "b", "c", "d", "e", "f" });
 	}
 
 	public static DefaultTableModel getModelValuesControllers(double vL,
@@ -49,7 +49,7 @@ public abstract class DataZN {
 				{ "PID", Double.valueOf(result[2][0]),
 						Double.valueOf(result[2][1]),
 						Double.valueOf(result[2][2]) } }, new String[] {
-				"Tipo controlador", "Kc", "Ti", "Td" }) {
+				"Controller Type", "Kc", "Ti", "Td" }) {
 			private static final long serialVersionUID = 1L;
 
 			Class[] columnTypes = { String.class, String.class, String.class,
@@ -79,9 +79,9 @@ public abstract class DataZN {
 		return description;
 	}
 
-	private static String headTitle = "Método de Ziegler y Nichols - Sistema de lazo abierto";
+	private static String headTitle = "Ziegler and Nichols - Open-Loop Method";
 
-	private static String description = "El Método consiste en obtener la respuesta de una señal medida ante una entrada escalón en un sistema de lazo abierto.\n\nSi la planta no contiene integradores ni polos dominantes complejos conjugados, la curva puede tener la forma de una letra S. Si la respuesta no exhibe dicha forma este método no es pertinente.\n\nTales curvas de respuesta se generan experimentalmente o a partir de una simulación dinámica de la planta y están caracterizadas por dos parámetros:\n\nL: Tiempo de retardo.\n\nT: Constante de tiempo.\n\nEstos parámetros se determinan dibujando una recta tangente en el punto de inflexión de la curva y determinando las intersecciones de la misma con el eje del tiempo y la línea Y(t) = K; siendo K la ganancia aplicada. \n\n";
+	private static String description = "The method involves obtaining a measure the response to a step input signal an open loop system .\n\nIf  the plant contains no dominant poles integrators or complex conjugates , the curve may take the form of a letter S. If the response does not exhibit this manner this method is not relevant .\n\nThat response curves are experimentally generated or from a dynamic simulation of the plant and are characterized by two parameters:\n\nL: delay .\n\nT: time constant.\n\n These parameters are determined by drawing a tangent line at the turning point of the curve and determining the intersections of the same with the time axis and the line Y ( t) = K ;  be K gain applied.";
 
 	private static double redondear(double numero) {
 		return Math.rint(numero * 100.0D) / 100.0D;

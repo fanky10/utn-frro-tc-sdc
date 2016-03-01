@@ -21,7 +21,7 @@ public abstract class DataCC {
 				{ "PID", Double.valueOf(result[2][0]),
 						Double.valueOf(result[2][1]),
 						Double.valueOf(result[2][2]) } }, new String[] {
-				"Tipo controlador", "Kc", "Ti", "Td" }) {
+				"Controller Type", "Kc", "Ti", "Td" }) {
 			private static final long serialVersionUID = 1L;
 
 			Class[] columnTypes = { String.class, String.class, String.class,

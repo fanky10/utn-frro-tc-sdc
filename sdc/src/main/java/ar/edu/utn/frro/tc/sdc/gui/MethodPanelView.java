@@ -66,20 +66,20 @@ public class MethodPanelView extends JPanel {
 		this.mainPanel.add(graphicPanel);
 
 		JPanel referencePanel = new JPanel();
-		referencePanel.setBorder(new TitledBorder(null, "Referencias", 4, 2,
+		referencePanel.setBorder(new TitledBorder(null, "References", 4, 2,
 				null, null));
 		referencePanel.setBounds(645, 312, 342, 86);
 		this.mainPanel.add(referencePanel);
 
 		JPanel aditionalInfo = new JPanel();
-		aditionalInfo.setBorder(new TitledBorder(null, "Información Adicional",
+		aditionalInfo.setBorder(new TitledBorder(null, "Additional Information",
 				4, 2, null, null));
 		aditionalInfo.setBounds(645, 395, 342, 165);
 		aditionalInfo.setAlignmentX(0.0F);
 		this.mainPanel.add(aditionalInfo);
 
 		JPanel panelLT = new JPanel();
-		panelLT.setBorder(new TitledBorder(null, "Valores de L y T", 4, 2,
+		panelLT.setBorder(new TitledBorder(null, "Values to L y T", 4, 2,
 				null, null));
 		panelLT.setBounds(marginRight2, 124, 200, 70);
 		panelLT.setLayout(new BorderLayout(0, 0));
@@ -90,7 +90,7 @@ public class MethodPanelView extends JPanel {
 
 		JPanel vControllerPanel = new JPanel();
 		vControllerPanel.setBorder(new TitledBorder(null,
-				"Valores Sintonización", 4, 2, null, null));
+				"Tuning Values", 4, 2, null, null));
 		vControllerPanel.setBounds(645, 198, 349, 110);
 		vControllerPanel.setLayout(new BorderLayout(0, 0));
 
@@ -99,7 +99,7 @@ public class MethodPanelView extends JPanel {
 		this.mainPanel.add(vControllerPanel);
 
 		JPanel jpInput = new JPanel();
-		jpInput.setBorder(new TitledBorder(null, "Valores de Entrada", 4, 2,
+		jpInput.setBorder(new TitledBorder(null, "Input values", 4, 2,
 				null, null));
 		jpInput.setBounds(marginRight2, marginTop, 200, 70);
 		jpInput.setLayout(new BorderLayout(0, 0));
@@ -142,49 +142,49 @@ public class MethodPanelView extends JPanel {
 
 		this.mainPanel.setLayout(null);
 
-		JButton btnDraw = new JButton("  Graficar", new ImageIcon(
+		JButton btnDraw = new JButton("  Graphing", new ImageIcon(
 				MethodPanelView.class.getResource("/icons/icon_graficar.png")));
 		btnDraw.setHorizontalAlignment(2);
 		btnDraw.setBounds(850, marginTop, 140, 40);
 
-		JButton btnClean = new JButton("  Limpiar", new ImageIcon(
+		JButton btnClean = new JButton("  Clean", new ImageIcon(
 				MethodPanelView.class.getResource("/icons/icon_limpiar.png")));
 		btnClean.setHorizontalAlignment(2);
 		btnClean.setBounds(850, marginTop + 40, 140, 40);
 
-		JButton btnSave = new JButton("  Guardar", new ImageIcon(
+		JButton btnSave = new JButton("  Save", new ImageIcon(
 				MethodPanelView.class.getResource("/icons/icon_guardar.png")));
 		btnSave.setHorizontalAlignment(2);
 		btnSave.setBounds(850, marginTop + 80, 140, 40);
 
-		final JButton btnStop = new JButton("  Parar", new ImageIcon(
+		final JButton btnStop = new JButton("  Stop", new ImageIcon(
 				MethodPanelView.class.getResource("/icons/icon_cancelar.png")));
 		btnStop.setHorizontalAlignment(2);
 		btnStop.setBounds(850, marginTop + 120, 140, 40);
 
-		JButton btnAssumedModel = new JButton("Modelo asumido", new ImageIcon(
+		JButton btnAssumedModel = new JButton("Model Assumed", new ImageIcon(
 				MethodPanelView.class.getResource("/icons/icon_formula.png")));
 		btnAssumedModel.setHorizontalAlignment(2);
 		btnAssumedModel.setBounds(10, 22, 150, 40);
 
-		JButton btnEquations = new JButton("Ecuaciones", new ImageIcon(
+		JButton btnEquations = new JButton("Equations", new ImageIcon(
 				MethodPanelView.class.getResource("/icons/icon_formula.png")));
 		btnEquations.setHorizontalAlignment(2);
 		btnEquations.setBounds(180, 22, 150, 40);
 
-		JButton btnConstants = new JButton("Constantes", new ImageIcon(
+		JButton btnConstants = new JButton("Constants", new ImageIcon(
 				MethodPanelView.class.getResource("/icons/icon_formula.png")));
 		btnConstants.setHorizontalAlignment(2);
 		btnConstants.setBounds(10, 115, 150, 40);
 
-		JButton btnDescription = new JButton("Descripción método",
+		JButton btnDescription = new JButton("Method Description",
 				new ImageIcon(
 						MethodPanelView.class
 								.getResource("/icons/icon_formula.png")));
 		btnDescription.setHorizontalAlignment(2);
 		btnDescription.setBounds(180, 69, 150, 40);
 
-		JButton controllerSchema = new JButton("Esquema del Controlador",
+		JButton controllerSchema = new JButton("Controller Scheme",
 				new ImageIcon(
 						MethodPanelView.class
 								.getResource("/icons/icon_formula.png")));
@@ -205,14 +205,14 @@ public class MethodPanelView extends JPanel {
 		aditionalInfo.add(btnDescription);
 		aditionalInfo.add(controllerSchema);
 
-		JLabel lblGanancia = new JLabel("Ganancia");
-		JLabel lblRespuesta = new JLabel("Respuesta");
+		JLabel lblGanancia = new JLabel("Gain");
+		JLabel lblRespuesta = new JLabel("Response");
 		JLabel lblRectaTangenteAl = new JLabel(
-				"Recta tangente al punto de inflexión");
-		JLabel lblRetardol = new JLabel("Retardo (L)");
-		JLabel lblCteDeTiempo = new JLabel("Cte. de tiempo (T)");
+				"Straight Tangent to the Turning Point");
+		JLabel lblRetardol = new JLabel("Retardment (L)");
+		JLabel lblCteDeTiempo = new JLabel("Time Constant (T)");
 
-		JLabel blanco = new JLabel("Ganancia");
+		JLabel blanco = new JLabel("Gain");
 		blanco.setIcon(new ImageIcon(App.class
 				.getResource("/icons/blanco.png")));
 		JLabel rojo = new JLabel("Red");
@@ -262,7 +262,7 @@ public class MethodPanelView extends JPanel {
 		referencePanel.add(lblRetardol);
 		referencePanel.add(lblCteDeTiempo);
 
-		JLabel lblModeloAsumidoDe = new JLabel("Modelo asumido de la planta:");
+		JLabel lblModeloAsumidoDe = new JLabel("Assumed Plant Model:");
 		lblModeloAsumidoDe.setFont(new Font("Tahoma", 0, 15));
 		lblModeloAsumidoDe.setBounds(695, 243, 350, 19);
 		this.mainPanel.add(lblModeloAsumidoDe);
@@ -292,7 +292,7 @@ public class MethodPanelView extends JPanel {
 
 		btnAssumedModel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String title = "Modelo asumido";
+				String title = "Model Assumed";
 
 				ModalEquationView dialog = new ModalEquationView(mainView,
 						title, "/icons/equationFirstOrder.png");
@@ -303,7 +303,7 @@ public class MethodPanelView extends JPanel {
 		});
 		btnEquations.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String title = "Ecuaciones del método";
+				String title = "Method Equations";
 
 				ModalEquationView dialog = new ModalEquationView(
 						mainView,
@@ -330,7 +330,7 @@ public class MethodPanelView extends JPanel {
 		});
 		controllerSchema.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String title = "Esquema del Controlador";
+				String title = "Controller Scheme";
 
 				ModalEquationView dialog = new ModalEquationView(mainView,
 						title, "/icons/controllerSchemaOpenLoop.png");
@@ -402,24 +402,24 @@ public class MethodPanelView extends JPanel {
 								JOptionPane
 										.showMessageDialog(
 												null,
-												"Valor de constantes muy grande. El valor puede tomar una constante como máximo es 20",
+												"Very large constant value . The value can have a constant maximum is 20",
 												"Error", 0, null);
 							}
 						} else {
 							JOptionPane
 									.showMessageDialog(
 											null,
-											"Las constantes deben ser valores mayores que cero",
+											"Constant values ​​must be greater than zero",
 											"Error", 0, null);
 						}
 					} else {
 						JOptionPane.showMessageDialog(null,
-								"Debe ingresar valores numéricos", "Error", 0,
+								"You must enter numeric values", "Error", 0,
 								null);
 					}
 				} else {
 					JOptionPane.showMessageDialog(null,
-							"Debe ingresar constantes de tiempo y ganancia",
+							"You must enter time constants and gain",
 							"Error", 0, null);
 
 				}
@@ -450,13 +450,13 @@ public class MethodPanelView extends JPanel {
 				if (MethodPanelView.this.band == 1) {
 					btnStop.setIcon(new ImageIcon(MethodPanelView.class
 							.getResource("/icons/icon_aceptar.png")));
-					btnStop.setText(" Continuar");
+					btnStop.setText(" Continue");
 					MethodPanelView.this.graficador.stop();
 					MethodPanelView.this.band = 2;
 				} else if (MethodPanelView.this.band == 2) {
 					btnStop.setIcon(new ImageIcon(MethodPanelView.class
 							.getResource("/icons/icon_cancelar.png")));
-					btnStop.setText(" Parar");
+					btnStop.setText(" Stop");
 					MethodPanelView.this.graficador.start();
 					MethodPanelView.this.band = 1;
 				}
@@ -522,7 +522,7 @@ public class MethodPanelView extends JPanel {
 
 	private DefaultTableModel getInputTableModel() {
 		return new DefaultTableModel(new Object[][] { new Object[2] },
-				new String[] { "Ganancia", "Cte. Tiempo" });
+				new String[] { "Gain", "Time Constant" });
 	}
 
 	public JPanel getMainPanel() {

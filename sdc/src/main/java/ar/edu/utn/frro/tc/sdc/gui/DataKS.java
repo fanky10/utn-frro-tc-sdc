@@ -24,7 +24,7 @@ public abstract class DataKS {
 						Double.valueOf(constantesM[2][4]),
 						Double.valueOf(constantesM[2][5]) } },
 
-		new String[] { "Criterios", "a", "b", "c", "d", "e", "f" }) {
+		new String[] { "Criterion", "a", "b", "c", "d", "e", "f" }) {
 			private static final long serialVersionUID = 1L;
 
 			Class[] columnTypes = { String.class, String.class, String.class,
@@ -74,7 +74,7 @@ public abstract class DataKS {
 				{ "PID-ISE", Double.valueOf(result[2][0]),
 						Double.valueOf(result[2][1]),
 						Double.valueOf(result[2][2]) } }, new String[] {
-				"Tipo controlador", "Kc", "Ti", "Td" }) {
+				"Controller Type", "Kc", "Ti", "Td" }) {
 			private static final long serialVersionUID = 1L;
 
 			Class[] columnTypes = { String.class, String.class, String.class,
