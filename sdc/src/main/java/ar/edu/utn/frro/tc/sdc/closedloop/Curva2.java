@@ -13,7 +13,7 @@ public class Curva2
   private double[] ktest = { 1.0D, 5.0D, 8.0D };
   private String[] title = { "  K = 1                                                                                      ", 
     "  K = 1                                   K = 5                                           ", 
-    "                   K = 1                                  K = 5                                K último = 8       " };
+    "                   K = 1                                  K = 5                                K last = 8       " };
   
   public Curva2()
   {

@@ -10,7 +10,7 @@ public class Curva1 extends Curva
   private double[] ktest = { 1.0D, 4.0D, 10.0D };
   private String[] title = { "  K = 1                                                                                      ", 
     "  K = 1                                   K = 4                                           ", 
-    "                   K = 1                                  K = 4                                K último = 10      " };
+    "                   K = 1                                  K = 4                                K last = 10      " };
   
   public Curva1()
   {
