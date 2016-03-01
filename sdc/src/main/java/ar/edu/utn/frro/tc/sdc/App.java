@@ -61,7 +61,7 @@ public class App extends JFrame {
 
 		final App frame = this;
 
-		setTitle("Sintonización de controladores");
+		setTitle("Tuning Controllers");
 		setIconImage(Toolkit
 				.getDefaultToolkit()
 				.getImage(
@@ -78,7 +78,7 @@ public class App extends JFrame {
 		setContentPane(this.contentPane);
 		this.contentPane.setLayout(new BorderLayout(0, 0));
 
-		final JMenu curvaR = new JMenu("Curva Reacción Z-N");
+		final JMenu curvaR = new JMenu("Reaction Curve Z-N");
 		curvaR.setHorizontalAlignment(0);
 		curvaR.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
@@ -172,7 +172,7 @@ public class App extends JFrame {
 			}
 
 		});
-		final JMenu oscilaciones = new JMenu("Oscilaciones Sostenidas Z-N");
+		final JMenu oscilaciones = new JMenu("Sustained Oscillation Z-N");
 		oscilaciones.setHorizontalAlignment(0);
 		oscilaciones.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
@@ -214,7 +214,7 @@ public class App extends JFrame {
 			}
 
 		});
-		final JMenu mnExit = new JMenu("Salir");
+		final JMenu mnExit = new JMenu("Exit");
 		mnExit.setHorizontalAlignment(0);
 		mnExit.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent arg0) {
