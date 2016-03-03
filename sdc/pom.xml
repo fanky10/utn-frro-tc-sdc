@@ -7,6 +7,17 @@
     <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
+<!--
+M. Salvetti
+ comentario para la Pull Request
+ puedo seguir laburando acá... total estoy con el repo local
+
+ gfsdagfds
+ fgfdsg
+
+
+ -->
+
     <name>sdc</name>
     <url>http://maven.apache.org</url>
 
